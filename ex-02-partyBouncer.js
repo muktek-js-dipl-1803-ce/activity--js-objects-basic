@@ -26,11 +26,11 @@ var listOfPeople = [
 
 var guestList = partyBouncer(listOfPeople)
 
-console.assert(guestList.length === 6)
+console.assert(guestList.length === 10)
 console.assert(guestList[0] === "Sherry Tomkins")
-console.assert(guestList[1] === "Rufus Johnson")
-console.assert(guestList[5] === "Bobby Francois")
+console.assert(guestList[1] === "Buffy Chang")
+console.assert(guestList[5] === "Shannon 'Bannon")
 
 console.assert(guestList.indexOf('Jimmy Dreyfus') === -1)
 console.assert(guestList.indexOf('Romy Podolski') === -1)
-console.assert(guestList.indexOf('Ahmad Funchess') === -1)
+console.assert(guestList.indexOf('Salomon Marzococo') === -1)
