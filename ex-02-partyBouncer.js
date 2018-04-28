@@ -23,14 +23,52 @@ var listOfPeople = [
   { name: 'Ahmad Funchess', age: 44, isFelon: true}
 ]
 
+// function partyBouncer_COOL(theList){
+//   return theArray
+//     .filter(function(el){
+//       return el.age >= 18 && el.isFelon === false
+//     })
+//     .map(function(el){ return
+//       el.name
+//     })
+// }
+
+// INPUT : array of objects
+function partyBouncer(arrayOfGuestObjects){
+  // (1) Define what we will return
+  var filteredArrayOfStrings = []
+
+  // (2) Iterate over the Array input
+  for(var i = 0; i < arrayOfGuestObjects.length ; i++){
+
+    // (3) Store in a named variable the element we are accessing
+    //     on each iteration
+    var guestObjEl = arrayOfGuestObjects[i]
+
+    //(4) Create a condition to evaluate how we will modify the return value
+    if( guestObjEl.age >= 18 && guestObjEl.isFelon === false ){
+
+      //(5) Modify the return value/array with
+      //     the relevant value from this iteration
+      filteredArrayOfStrings.push(guestObjEl.name)
+    }
+  }
+  //OUTPUT : filtered array of strings
+  // (6) return the output 'return value'
+  return filteredArrayOfStrings
+}
+
 
 var guestList = partyBouncer(listOfPeople)
 
-console.assert(guestList.length === 10)
-console.assert(guestList[0] === "Sherry Tomkins")
-console.assert(guestList[1] === "Buffy Chang")
-console.assert(guestList[5] === "Shannon 'Bannon")
+console.log(guestList)
+console.log(guestList.length)
 
-console.assert(guestList.indexOf('Jimmy Dreyfus') === -1)
-console.assert(guestList.indexOf('Romy Podolski') === -1)
-console.assert(guestList.indexOf('Salomon Marzococo') === -1)
+console.assert(guestList.length === 7)
+console.assert( guestList.indexOf("Sherry Tomkins") >= 0 )
+console.assert( guestList.indexOf("Greta Irishkov") >= 0 )
+console.assert( guestList.indexOf("Rufus Johnson") >= 0 )
+
+console.assert( guestList.indexOf("Romy Podolski") === -1 )
+console.assert( guestList.indexOf("Ahmad Funchess") === -1 )
+console.assert( guestList.indexOf('Salomon Marzococo') === -1)

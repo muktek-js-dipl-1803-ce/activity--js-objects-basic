@@ -18,6 +18,28 @@
  *    }
 **/
 
+function dogFactory(theName, type, yearsOld){
+  //(1) declare what we are going to return
+  var dogObj = {
+    legs: 4,
+    specie: 'canis familiaris',
+
+    //(2) make modifications to return value
+    name : theName,
+    breed: type,
+    humanAge : yearsOld * 7
+  }
+
+  //(2 - alternative)
+  // dogObj.name = theName
+  // dogObj.breed = type
+  // dogObj.humanAge = yearsOld * 7
+
+
+  // (3) return the thing that we need to return
+  return dogObj
+
+}
 
 var dog1 = dogFactory('Schulzty', 'Dachsund', 8)
 var dog2 = dogFactory('Mia', 'Pit Bull', 9)
